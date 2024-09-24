@@ -1,17 +1,16 @@
-import { ThemeProvider } from "styled-components/native";
+import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
+import { Title } from "../../components/Title";
 import { Container } from "./styles";
-import theme from "../../theme";
-import { StatusBar } from "react-native";
+
 
 export function Login(){
     return(
-        <ThemeProvider theme={theme}>
-            <StatusBar
-                barStyle='light-content'
-                backgroundColor='transparent'
-                translucent
-            />
-        <Container></Container>
-        </ThemeProvider>
+        <Container>
+            <Title/>
+            <Input placeholder="Login"/>
+            <Input placeholder="Senha" secureTextEntry={true} />
+            <Button title="Entrar"></Button>
+        </Container>
     )
 }
